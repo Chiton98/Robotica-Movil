@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find mlp2wr_description)/urdf/mlp2wr.xacro'"/>
+
+
+<!--Posicion inicial del robot -->
+  <arg name = "x" default = "0" />
+  <arg name = "y" default = "0" />
+  <arg name = "z" default = "0.5" />
+
+<!--Crear el nodo para poder spawnear el robot-->
+<node name = "mlp2wr_spawn" pkg = "gazebo_ros" type = "spawn_model"  output = "screen" 
+args = "-urdf -param robot_description -model mlp2wr -x $(arg x) -y $(arg y) -z $(arg z)"/> 
+
+</launch>

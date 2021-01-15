@@ -1,0 +1,8 @@
+prefix=/home/chiton/simulation_ws/install
+
+Name: mlp2wr_motion_plan
+Description: Description of mlp2wr_motion_plan
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

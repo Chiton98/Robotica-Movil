@@ -1,0 +1,2 @@
+mlp2wr_description:mlp2wr_gazebo:mlp2wr_motion_plan
+-DCATKIN_DEVEL_PREFIX=/home/chiton/simulation_ws/devel -DCMAKE_INSTALL_PREFIX=/home/chiton/simulation_ws/install -G Unix Makefiles
