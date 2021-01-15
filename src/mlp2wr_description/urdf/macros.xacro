@@ -11,26 +11,23 @@
 		    <collision name="${name}_collision">
 		      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
 		      <geometry>
-			<cylinder length="0.025" radius="0.035"/>
+			<cylinder length="0.04" radius="0.1"/>
 		      </geometry>
 		    </collision>
-
-
 		    <visual name="${name}_visual">
 		      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
 		      <geometry>
-							<cylinder length="0.025" radius="0.035"/>
+			<cylinder length="0.04" radius="0.1"/>
 		      </geometry>
 		    </visual>
   		</link>
 	</macro>
 
-<!--Macro para los joints-->
 <macro name = "joint_wheel" params = "name child origin_xyz">
  <joint name="${name}" type="continuous">
     <origin rpy="0 0 0" xyz="${origin_xyz}"/>
     <child link="${child}"/>
-    <parent link="base_link"/>
+    <parent link="link_chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
     <limit effort="10000" velocity="1000"/>
     <joint_properties damping="1.0" friction="1.0"/>
